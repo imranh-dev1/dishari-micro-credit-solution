@@ -9,9 +9,10 @@ model Employee {
     nationalID  String   @unique
     designation String
     salary      Float
+    userID      String   @unique
+    user        User     @relation(fields: [userID], references: [id], onDelete: Cascade, onUpdate: Cascade)
     createdAt   DateTime @default(now())
     updatedAt   DateTime @updatedAt
-    User        User?
 
     @@map("employees")
 }
