@@ -19,10 +19,9 @@ app.use(cookieParser());
 app.get('/', (req: Request, res: Response) => {
     res.status(httpStatus.OK).json({
         success: true,
+        status: httpStatus.OK,
         message: 'Welcome to Pizza Delivery API Server',
     });
 });
-
-
 
 export default app;
