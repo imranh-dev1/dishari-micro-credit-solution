@@ -1,13 +1,17 @@
 model Employee {
-    id         String @id @default(uuid())
-    employeeID Int    @unique @default(autoincrement())
-    email      String @unique
-    name       String
-    gardianName String
-    phone      String
-    nationalID String @unique
+    id          String   @id @default(uuid())
+    email       String   @unique
+    name        String
+    fotherName  String
+    motherName  String
+    phone       String
+    address     String
+    nationalID  String   @unique
     designation String
-    salary     Float
-    createdAt  DateTime @default(now())
-    updatedAt  DateTime @updatedAt
+    salary      Float
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+    User        User?
+
+    @@map("employees")
 }

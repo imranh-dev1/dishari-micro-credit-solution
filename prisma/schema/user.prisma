@@ -1,5 +1,17 @@
 model User {
-  id    String  @id @default(uuid())
-  email String  @unique
-  name  String?
+  id         String   @id @default(uuid())
+  employee   Employee @relation(fields: [employeeId], references: [id])
+  employeeId String   @unique
+  email      String   @unique
+  name       String
+  fotherName String?
+  motherName String?
+  phone      String?
+  nationalID String   @unique
+  address    String?
+  password   String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("users")
 }
