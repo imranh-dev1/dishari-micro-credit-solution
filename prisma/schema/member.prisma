@@ -1,0 +1,14 @@
+model Member {
+    id          String   @id @default(uuid())
+    memberID    String   @unique
+    name        String
+    gurdianName String
+    phone       String
+    nationalID  String   @unique
+    email       String   @unique
+    password    String
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    @@map("members")
+}
