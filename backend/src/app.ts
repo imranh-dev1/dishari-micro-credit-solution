@@ -7,6 +7,7 @@ import cors from "cors";
 import config from "./app/config";
 import cookieParser from "cookie-parser";
 import httpStatus from "http-status";
+import { AuthRoutes } from "./app/module/auth/auth.route";
 
 const app: Application = express();
 
@@ -21,6 +22,8 @@ app.use(
 );
 
 app.use(cookieParser());
+
+app.use("/api/auth", AuthRoutes);
 
 app.get("/", (req: Request, res: Response) => {
 	res.status(httpStatus.OK).json({
