@@ -1,0 +1,17 @@
+enum Role {
+    CEO
+    BRANCH_MANAGER
+    LOAN_OFFICER
+}
+
+enum UserStatus {
+    ACTIVE
+    BLOCKED
+    DELETED
+}
+
+enum Gender {
+    MALE
+    FEMALE
+    OTHER
+}

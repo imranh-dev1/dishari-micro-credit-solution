@@ -10,3 +10,8 @@ export interface RegisterPayload {
 	designation: string;
 	salary: number;
 }
+
+export interface LoginPayload {
+	email: string;
+	password: string;
+}
