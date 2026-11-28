@@ -29,7 +29,7 @@ app.get("/", (req: Request, res: Response) => {
 	res.status(httpStatus.OK).json({
 		success: true,
 		status: httpStatus.OK,
-		message: "Welcome to Dishari micro credit solution API Server",
+		message: "Welcome to Dishari micro credit solution API Server..",
 	});
 });
 
